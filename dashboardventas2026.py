@@ -70,7 +70,7 @@ ax2.set_ylabel('Ventas')
 st.pyplot(fig2)
 
 st.subheader('Ventas a lo largo del tiempo')
-sales_over_time = filtered_df.set_index('Order Date').resample('M')['Sales'].sum().reset_index()
+sales_over_time = filtered_df.set_index('Order Date').resample('ME')['Sales'].sum().reset_index()
 fig3, ax3 = plt.subplots(figsize=(12, 6))
 sns.lineplot(x='Order Date', y='Sales', data=sales_over_time, marker='o', ax=ax3)
 ax3.set_title('Ventas Mensuales a lo largo del tiempo')
