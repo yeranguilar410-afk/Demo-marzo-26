@@ -99,7 +99,7 @@ sns.lineplot(data=sales_time, x='Order Date', y='Sales', marker='o', ax=ax3)
 st.pyplot(fig3)
 
 # 7. MAPA (Requisito)
-st.subheader('🌍 Distribución Geográfica por Estado')
+st.subheader('🌍 Categoría de Venta por región')
 sales_state = filtered_df.groupby('State')['Sales'].sum().reset_index()
 
 # Convertimos nombres a códigos de 2 letras para que Plotly los reconozca
